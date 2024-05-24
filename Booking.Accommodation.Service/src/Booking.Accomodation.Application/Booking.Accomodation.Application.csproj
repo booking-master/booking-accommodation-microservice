@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\Booking.BuildingBlocks.Application\Booking.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\IntegrationEvents\Booking.Accomodation.IntegrationEvents\Booking.Accomodation.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\IntegrationEvents\Booking.Commerce.IntegrationEvents\Booking.Commerce.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\IntegrationEvents\Booking.UserAccess.IntegrationEvents\Booking.UserAccess.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\Booking.Accomodation.Domain\Booking.Accomodation.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Hosts\NewFolder\" />
+  </ItemGroup>
+
+</Project>
