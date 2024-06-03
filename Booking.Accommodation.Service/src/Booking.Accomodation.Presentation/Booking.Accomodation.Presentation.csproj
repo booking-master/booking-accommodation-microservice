@@ -13,6 +13,9 @@
   <ItemGroup>
     <ProjectReference Include="..\BuildingBlocks\Booking.BuildingBlocks.Presentation\Booking.BuildingBlocks.Presentation.csproj" />
     <ProjectReference Include="..\Booking.Accomodation.Application\Booking.Accomodation.Application.csproj" />
+    <ProjectReference Include="..\Shared\BuildingBlocks\Booking.BuildingBlocks.Application\Booking.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\Shared\BuildingBlocks\Booking.BuildingBlocks.Domain\Booking.BuildingBlocks.Domain.csproj" />
+    <ProjectReference Include="..\Shared\BuildingBlocks\Booking.BuildingBlocks.Presentation\Booking.BuildingBlocks.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,10 @@
     <ProjectReference Include="..\IntegrationEvents\Booking.Commerce.IntegrationEvents\Booking.Commerce.IntegrationEvents.csproj" />
     <ProjectReference Include="..\IntegrationEvents\Booking.UserAccess.IntegrationEvents\Booking.UserAccess.IntegrationEvents.csproj" />
     <ProjectReference Include="..\Booking.Accomodation.Domain\Booking.Accomodation.Domain.csproj" />
+    <ProjectReference Include="..\Shared\BuildingBlocks\Booking.BuildingBlocks.Application\Booking.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\Shared\IntegrationEvents\Booking.Accomodation.IntegrationEvents\Booking.Accomodation.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\Shared\IntegrationEvents\Booking.Commerce.IntegrationEvents\Booking.Commerce.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\Shared\IntegrationEvents\Booking.UserAccess.IntegrationEvents\Booking.UserAccess.IntegrationEvents.csproj" />
   </ItemGroup>
 
   <ItemGroup>
