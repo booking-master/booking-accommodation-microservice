@@ -1,6 +1,6 @@
 [submodule "Booking.Accommodation.Service/src/IntegrationEvents"]
-	path = Booking.Accommodation.Service/src/IntegrationEvents
+	path = Booking.Accommodation.Service/src/Shared/IntegrationEvents
 	url = https://github.com/booking-master/booking-integration-events
 [submodule "Booking.Accommodation.Service/src/BuildingBlocks"]
-	path = Booking.Accommodation.Service/src/BuildingBlocks
+	path = Booking.Accommodation.Service/src/Shared/BuildingBlocks
 	url = https://github.com/booking-master/building-blocks
