@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    
-    <ProjectReference Include="..\BuildingBlocks\Booking.BuildingBlocks.Domain\Booking.BuildingBlocks.Domain.csproj" />
-    
     <ProjectReference Include="..\Shared\BuildingBlocks\Booking.BuildingBlocks.Domain\Booking.BuildingBlocks.Domain.csproj" />
   </ItemGroup>
 
