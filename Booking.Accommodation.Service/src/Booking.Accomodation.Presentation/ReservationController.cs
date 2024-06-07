@@ -9,7 +9,6 @@ using Booking.AccommodationNS.Application.Features.Reservations.GetGuestReservat
 using Booking.AccommodationNS.Application.Features.Reservations.GetHostReservationRequests;
 using Booking.AccommodationNS.Application.Features.Reservations.GetHostReservations;
 using Booking.AccommodationNS.Presentation.Contracts;
-using Booking.BuildingBlocks.Domain.Enums;
 using Booking.BuildingBlocks.Presentation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +23,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpPost("")]
-        [HasPermission(Permission.GuestReservationOperations)]
         public async Task<IActionResult> CreateReservation([FromBody] CreateReservationRequest request, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new CreateReservationCommand(request.AccommodationId, request.GuestId,
@@ -50,7 +48,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpPost("requests")]
-        [HasPermission(Permission.GuestReservationOperations)]
         public async Task<IActionResult> CreateReservationRequest([FromBody] CreateReservationRequestRequest request, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new CreateReservationRequestCommand(request.AccommodationId, request.GuestId,
@@ -64,7 +61,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpGet("requests/host/{id}")]
-        [HasPermission(Permission.HostReservationOperations)]
         public async Task<IActionResult> GetHostRequests(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new GetHostReservationRequestsQuery(id));
@@ -77,7 +73,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpGet("requests/guest/{id}")]
-        [HasPermission(Permission.GuestReservationOperations)]
         public async Task<IActionResult> GetGuestRequests(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new GetGuestReservationRequestsQuery(id));
@@ -90,7 +85,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpPut("requests/accept/{id}")]
-        [HasPermission(Permission.HostReservationOperations)]
         public async Task<IActionResult> AcceptReservationRequest(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new AcceptReservationRequestCommand(id));
@@ -104,7 +98,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpPut("requests/cancel/{id}")]
-        [HasPermission(Permission.HostReservationOperations)]
         public async Task<IActionResult> CancelReservationRequest(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new CancelReservationRequestCommand(id));
@@ -118,7 +111,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpPut("cancel/")]
-        [HasPermission(Permission.GuestReservationOperations)]
         public async Task<IActionResult> CancelReservation([FromBody] CancelReservationRequest request, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new CancelReservationCommand(request.AccommodationId, request.ReservationId));
@@ -132,7 +124,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpGet("guest/{id}")]
-        [HasPermission(Permission.GuestReservationOperations)]
         public async Task<IActionResult> GetGuestReservations(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new GetGuestReservationsQuery(id));
@@ -146,7 +137,6 @@ namespace Booking.AccommodationNS.Presentation
         }
 
         [HttpGet("host/{id}")]
-        [HasPermission(Permission.HostReservationOperations)]
         public async Task<IActionResult> GetHostReservations(Guid id, CancellationToken cancellationToken)
         {
             var response = await Sender.Send(new GetHostReservationsQuery(id));
